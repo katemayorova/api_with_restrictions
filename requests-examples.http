@@ -1,0 +1,65 @@
+# примеры API-запросов
+
+###
+
+# получение объявлений
+GET {{baseUrl}}/advertisements/
+Content-Type: application/json
+
+###
+
+# создание объявления
+POST {{baseUrl}}/advertisements/
+Content-Type: application/json
+Authorization: Token 61bb13ec75bb3443840f22cb9d2e76b914ef1ada
+
+{
+  "title": "Продаю ноутбук",
+  "description": "В идеальном состояние"
+}
+
+###
+
+POST {{baseUrl}}/advertisements/
+Content-Type: application/json
+Authorization: Token 5020f0d543e1cb7884a21b100fd39cf88f1d8e75
+
+{
+  "title": "Шкаф IKEA",
+  "description": "Срочно"
+}
+
+###
+# попытка поменять объявление
+
+PATCH {{baseUrl}}/advertisements/1/
+Content-Type: application/json
+Authorization: Token 61bb13ec75bb3443840f22cb9d2e76b914ef1ada
+
+{
+  "status": "CLOSED"
+}
+
+###
+
+# фильтрация по создателю
+GET {{baseUrl}}/advertisements/?creator=3
+Content-Type: application/json
+
+###
+
+# фильтрация по дате
+GET {{baseUrl}}/advertisements/?created_at_before=2020-10-01
+Content-Type: application/json
+
+
+###
+
+GET {{baseUrl}}/advertisements/?status=CLOSED
+Content-Type: application/json
+
+###
+
+DELETE {{baseUrl}}/advertisements/5/
+Content-Type: application/json
+Authorization: Token 61bb13ec75bb3443840f22cb9d2e76b914ef1ada
