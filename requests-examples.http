@@ -32,7 +32,7 @@ Authorization: Token 5020f0d543e1cb7884a21b100fd39cf88f1d8e75
 ###
 # попытка поменять объявление
 
-PATCH {{baseUrl}}/advertisements/1/
+PATCH {{baseUrl}}/advertisements/10/
 Content-Type: application/json
 Authorization: Token 61bb13ec75bb3443840f22cb9d2e76b914ef1ada
 
